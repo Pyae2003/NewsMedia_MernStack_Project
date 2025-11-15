@@ -26,8 +26,14 @@ const NavBar = () => {
                 <Link to={"/"} className="text-white text-2xl front-semibold px-5"> Code Lab | Media World</Link>
              </div>
              <div className="space-x-6">
-                <Link to={"/"} className="text-yellow-50 hover:text-yellow-100" >Home</Link>
-                <Link to={"/createNews"} className="text-yellow-50 hover:text-yellow-100">Create News</Link>
+                 {
+                   !!user && (
+                    <>
+                      <Link to={"/"} className="text-yellow-50 hover:text-yellow-100" >Home</Link>
+                      <Link to={"/createNews"} className="text-yellow-50 hover:text-yellow-100">Create News</Link>
+                    </>
+                   )
+                 }
                 {
                     !user &&(
                         <>
